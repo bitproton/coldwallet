@@ -1,0 +1,5 @@
+@mixin centered($width: 1180px){
+	width:$width;
+	margin-left:auto;
+	margin-right:auto;
+}

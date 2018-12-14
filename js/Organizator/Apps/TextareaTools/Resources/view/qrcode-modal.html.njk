@@ -1,0 +1,28 @@
+<div class="modal__qrCode">
+	<div class="modal__qrCode__header">
+		QR Code
+		<span class="modalCloseButton js__modalcloser"><i class="fa fa-times"></i></span>
+	</div>
+	<div class="modal__qrCode__content">
+		<div class="qrCodeForm formStd">
+			{% if input.value|length > 1024 %}
+				<div class="notice notice--red">
+					Data is too long for generating QR code. Use raw text instead.
+				</div>
+			{% else %}
+				<div class="form-group">
+					<div class="row">
+						<div class="left">
+							<label class="label">{{ label }}</label>
+						</div>
+						<div class="right">
+							<div class="input qrCodeWrapper">
+								<canvas class="qrCode"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,52 @@
+<div class="modal__newAddress">
+	<div class="modal__newAddress__header">
+		Import Address
+		<span class="modalCloseButton js__modalcloser"><i class="fa fa-times"></i></span>
+	</div>
+	<div class="modal__newAddress__content">
+		<form name="wallet_new_address" class="modal__newAddress__form" action="{{ path('form_wallet_new_address', {}, { absolute:true }) }}" method="post" autocomplete="off" spellcheck="false">
+
+			<div class="form-group js__formGroup" for="wallet_new_address_label">
+				<div class="row">
+					<div class="left">
+						<label for="wallet_new_address_label" class="label">Label</label>
+					</div>
+					<div class="right">
+						<input id="wallet_new_address_label" name="wallet_new_address[label]" type="text" class="input js__input" org-validate="@notblank">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="wallet_new_address_privatekey">
+				<div class="row">
+					<div class="left">
+						<label for="wallet_new_address_privatekey" class="label">Private Key (WIF)</label>
+					</div>
+					<div class="right">
+						<input id="wallet_new_address_privatekey" name="wallet_new_address[privatekey]" type="text" class="input js__input" org-validate="@notblank && @bitcoinprivatekey">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="wallet_new_address_address">
+				<div class="row">
+					<div class="left">
+						<label for="wallet_new_address_address" class="label">Bitcoin Address</label>
+					</div>
+					<div class="right">
+						<input id="wallet_new_address_address" name="wallet_new_address[address]" type="text" class="input" readonly>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="wallet_new_address_submit">
+				<div class="row">
+					<div class="right">
+						<button id="wallet_new_address_submit" name="wallet_new_address[submit]" type="submit" class="button button--primary">Add</button>
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>

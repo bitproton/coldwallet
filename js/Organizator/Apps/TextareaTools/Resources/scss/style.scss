@@ -1,0 +1,120 @@
+@import '../../../../../../scss/mixins/_card'; /* public/scss/.. */
+@import '../../../../../../scss/mixins/_pane'; /* public/scss/.. */
+@import '../../../../../../scss/mixins/_monospace'; /* public/scss/.. */
+@import '../../../../../../scss/mixins/_form'; /* public/scss/.. */
+
+.modal__qrCode {
+	@include pane(
+		$prefix: 'modal__qrCode',
+		$contentPadding: 0
+	);
+	@include card(
+		$padding: 0
+	);
+
+	width:960px;
+	margin:18px;
+	font-size:13px;
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+	    color:#000;
+	    
+	    &:hover {
+	    	background-color:#f6f6f6;
+	    }
+	}
+
+	.modal__qrCode__header {
+		position: relative;
+	}
+
+	.qrCodeWrapper {
+		text-align:center;
+	}
+}
+
+.modal__qrCodeScanner {
+	@include pane(
+		$prefix: 'modal__qrCodeScanner',
+		$contentPadding: 18px
+	);
+	@include card(
+		$padding: 0
+	);
+
+	margin:18px;
+	font-size:13px;
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+	    color:#000;
+	    
+	    &:hover {
+	    	background-color:#f6f6f6;
+	    }
+	}
+
+	.modal__qrCodeScanner__header {
+		position: relative;
+	}
+
+	.qrCodeScannerWrapper {
+		text-align:center;
+	}
+
+	.qrCodeScanner {
+		width:640px;
+		height:480px;
+	}
+}
+
+.modal__json {
+	@include pane(
+		$prefix: 'modal__json',
+		$contentPadding: 0
+	);
+	@include card(
+		$padding: 0
+	);
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+	    color:#000;
+
+	    &:hover {
+	    	background-color:#f6f6f6;
+	    }
+	}
+
+	.modal__json__header {
+		position: relative;
+	}
+
+	width:960px;
+	margin:18px;
+	font-size:13px;
+}
+
+.qrCodeForm,
+.jsonForm {
+	padding:18px;
+}

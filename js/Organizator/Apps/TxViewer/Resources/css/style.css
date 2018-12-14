@@ -1,0 +1,46 @@
+/* public/scss/.. */
+.txPreview {
+  width: 100%;
+  display: block;
+  border: 1px solid #dedede;
+  transition: all 0.3s; }
+  .txPreview .vin:not(:first-child) .heading,
+  .txPreview .vout:not(:first-child) .heading,
+  .txPreview .summary:not(:first-child) .heading {
+    border-top: 1px solid #dedede; }
+  .txPreview .vin .heading,
+  .txPreview .vout .heading,
+  .txPreview .summary .heading {
+    padding: 10px 10px 9px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #dedede;
+    font-weight: bold; }
+  .txPreview .summary .value {
+    font-weight: bold; }
+  .txPreview .vinvoutList {
+    font-family: 'Lucida Console', Consolas, 'Courier New', monospace;
+    list-style: none;
+    padding: 10px;
+    margin: 0; }
+    .txPreview .vinvoutList li {
+      display: flex;
+      justify-content: space-between;
+      align-content: center; }
+      .txPreview .vinvoutList li:not(:last-child) {
+        margin-bottom: 10px; }
+      .txPreview .vinvoutList li.deductedChange {
+        display: none; }
+    .txPreview .vinvoutList > .left {
+      font-family: 'Lucida Console', Consolas, 'Courier New', monospace; }
+    .txPreview .vinvoutList > .right {
+      text-align: right; }
+    .txPreview .vinvoutList .highlighted {
+      font-weight: bold; }
+    .txPreview .vinvoutList a {
+      color: rgba(0, 45, 148, 0.75); }
+      .txPreview .vinvoutList a:hover {
+        text-decoration: underline; }
+  .txPreview .floatRight {
+    float: right; }
+
+/*# sourceMappingURL=style.css.map */

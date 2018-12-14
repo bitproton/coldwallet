@@ -1,0 +1,77 @@
+@import '../../../../../../scss/mixins/_monospace'; /* public/scss/.. */
+
+.txPreview {
+	width: 100%;
+    display: block;
+    border: 1px solid #dedede;
+    transition: all 0.3s;
+
+    .vin,
+    .vout,
+    .summary {
+    	&:not(:first-child) {
+    		.heading {
+    			border-top:1px solid #dedede;
+    		}
+    	}
+
+    	.heading {
+    		padding: 10px 10px 9px;
+    		background-color:#f6f6f6;
+			border-bottom:1px solid #dedede;
+			font-weight:bold;
+    	}
+    }
+
+    .summary {
+    	.value {
+    		font-weight:bold;
+    	}
+    }
+
+	.vinvoutList {
+		@include monospace;
+		
+		list-style:none;
+		padding: 10px;
+		margin:0;
+
+		li {
+			display:flex;
+			justify-content:space-between;
+			align-content:center;
+
+			&:not(:last-child){
+				margin-bottom:10px;
+			}
+
+			&.deductedChange {
+				display:none;
+			}
+		}
+
+		> .left {
+			@include monospace;
+		}
+
+		> .right {
+			text-align:right;
+		}
+
+		.highlighted {
+			font-weight:bold;
+		}
+
+		a {
+			color:rgba(#002D94, 0.75);
+			
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+
+	.floatRight {
+		float:right;
+	}
+}

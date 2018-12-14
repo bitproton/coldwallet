@@ -1,0 +1,178 @@
+/* public/scss/.. */
+/* public/scss/.. */
+/* public/scss/.. */
+/* public/scss/.. */
+.modal__addressDetails {
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  width: 960px;
+  font-size: 13px;
+  margin: 18px; }
+  .modal__addressDetails .modal__addressDetails__header {
+    padding: 12px 18px;
+    border-bottom: 1px solid #dedede;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px; }
+  .modal__addressDetails .modal__addressDetails__content {
+    padding: 18px; }
+  .modal__addressDetails .modal__addressDetails__header {
+    background-color: #0057e5;
+    color: #fff;
+    border: none;
+    position: relative; }
+  .modal__addressDetails .modalCloseButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px; }
+    .modal__addressDetails .modalCloseButton:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+  .modal__addressDetails .addressDetailsForm {
+    font-size: inherit; }
+    .modal__addressDetails .addressDetailsForm fieldset .form-group-collection {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+    .modal__addressDetails .addressDetailsForm fieldset.state--multichild .form-group-collection > li:not(:last-child) {
+      margin-bottom: 18px; }
+    .modal__addressDetails .addressDetailsForm fieldset.state--multichild .form-group:not(:last-child) {
+      margin-bottom: 6px; }
+    .modal__addressDetails .addressDetailsForm fieldset.state--multichild .advice {
+      top: -3px; }
+    .modal__addressDetails .addressDetailsForm .form-group .row {
+      display: flex;
+      align-content: center;
+      justify-content: flex-end; }
+    .modal__addressDetails .addressDetailsForm .form-group:not(:last-child) {
+      margin-bottom: 18px; }
+    .modal__addressDetails .addressDetailsForm .form-group:not(.wAppendix) .row > .left {
+      width: 50%; }
+    .modal__addressDetails .addressDetailsForm .form-group:not(.wAppendix) .row > .right {
+      width: 50%; }
+    .modal__addressDetails .addressDetailsForm .form-group.wAppendix .row > .left {
+      width: 40%; }
+    .modal__addressDetails .addressDetailsForm .form-group.wAppendix .row > .right {
+      width: 40%; }
+    .modal__addressDetails .addressDetailsForm .form-group.wAppendix .row > .appendix {
+      width: 20%;
+      padding-left: 12px; }
+    .modal__addressDetails .addressDetailsForm .form-group [type="checkbox"] {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .modal__addressDetails .addressDetailsForm .form-group .input[readonly] .asis,
+    .modal__addressDetails .addressDetailsForm .form-group .input[disabled] .asis {
+      cursor: text; }
+    .modal__addressDetails .addressDetailsForm .form-group .input[readonly]:not(.asis),
+    .modal__addressDetails .addressDetailsForm .form-group .input[disabled]:not(.asis) {
+      background-color: #f6f6f6;
+      color: rgba(0, 0, 0, 0.5);
+      cursor: default; }
+      .modal__addressDetails .addressDetailsForm .form-group .input[readonly]:not(.asis):focus,
+      .modal__addressDetails .addressDetailsForm .form-group .input[disabled]:not(.asis):focus {
+        border-color: #888; }
+    .modal__addressDetails .addressDetailsForm .button {
+      line-height: 1;
+      border: none;
+      outline: none;
+      box-shadow: none; }
+      .modal__addressDetails .addressDetailsForm .button--primary {
+        background-color: #0057E5;
+        color: #fff; }
+        .modal__addressDetails .addressDetailsForm .button--primary:hover, .modal__addressDetails .addressDetailsForm .button--primary:focus {
+          background-color: #1970ff; }
+    .modal__addressDetails .addressDetailsForm .label,
+    .modal__addressDetails .addressDetailsForm .input {
+      font-size: 100%; }
+    .modal__addressDetails .addressDetailsForm .label {
+      line-height: 1;
+      width: 100%;
+      display: block;
+      text-align: right;
+      padding: 10px;
+      background-color: #f6f6f6;
+      font-weight: bold;
+      color: #002; }
+      .modal__addressDetails .addressDetailsForm .label.align-left {
+        text-align: left; }
+      .modal__addressDetails .addressDetailsForm .label.align-right {
+        text-align: right; }
+    .modal__addressDetails .addressDetailsForm .input {
+      line-height: 115%;
+      width: 100%;
+      display: block;
+      padding: 8px;
+      border: 1px solid #dedede;
+      transition: border-color 0.3s, color 0.3s, background-color 0.3s; }
+      .modal__addressDetails .addressDetailsForm .input:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #0057E5; }
+      .modal__addressDetails .addressDetailsForm .input.hidden {
+        display: none; }
+    .modal__addressDetails .addressDetailsForm textarea {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      min-height: 5em;
+      max-height: 320px; }
+    .modal__addressDetails .addressDetailsForm fieldset:not(:last-child) {
+      margin-bottom: 18px; }
+    .modal__addressDetails .addressDetailsForm select.input {
+      padding: 7px 8px; }
+    .modal__addressDetails .addressDetailsForm .input--checkbox {
+      margin: 1px 8px 1px 0; }
+    .modal__addressDetails .addressDetailsForm .button {
+      padding: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer; }
+      .modal__addressDetails .addressDetailsForm .button--block {
+        display: block;
+        width: 100%; }
+    .modal__addressDetails .addressDetailsForm .helper-block {
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 1.5; }
+      .modal__addressDetails .addressDetailsForm .helper-block:first-line {
+        line-height: 1; }
+      .modal__addressDetails .addressDetailsForm .helper-block p:not(:last-child) {
+        margin-bottom: 0.5em; }
+      .modal__addressDetails .addressDetailsForm .helper-block a {
+        color: #66a0ff; }
+        .modal__addressDetails .addressDetailsForm .helper-block a:hover {
+          text-decoration: underline; }
+    .modal__addressDetails .addressDetailsForm .notice:not(:last-child) {
+      margin-bottom: 18px; }
+  .modal__addressDetails .qrCodeWrapper {
+    text-align: center;
+    margin-bottom: 18px; }
+    .modal__addressDetails .qrCodeWrapper a {
+      display: inline-block; }
+  .modal__addressDetails .inputContainer {
+    position: relative; }
+  .modal__addressDetails .inputAppendixButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 33px;
+    text-align: center;
+    background-color: #0057E5;
+    color: #fff;
+    line-height: 33px;
+    display: block;
+    cursor: pointer;
+    z-index: 1; }
+    .modal__addressDetails .inputAppendixButton:hover {
+      background-color: #1970ff; }
+
+/*# sourceMappingURL=style.css.map */

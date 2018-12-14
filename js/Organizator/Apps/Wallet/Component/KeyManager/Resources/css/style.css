@@ -1,0 +1,191 @@
+/* public/scss/.. */
+/* public/scss/.. */
+/* public/scss/.. */
+/* public/scss/.. */
+.modal__newAddress {
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  width: 960px;
+  margin: 18px;
+  font-size: 13px; }
+  .modal__newAddress .modal__newAddress__header {
+    padding: 12px 18px;
+    border-bottom: 1px solid #dedede;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px; }
+  .modal__newAddress .modal__newAddress__content {
+    padding: 18px; }
+  .modal__newAddress .modalCloseButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px; }
+    .modal__newAddress .modalCloseButton:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+  .modal__newAddress .modal__newAddress__header {
+    background-color: #0057e5;
+    color: #fff;
+    border: none;
+    position: relative; }
+
+.modal__newAddress__form {
+  font-size: inherit; }
+  .modal__newAddress__form fieldset .form-group-collection {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .modal__newAddress__form fieldset.state--multichild .form-group-collection > li:not(:last-child) {
+    margin-bottom: 12px; }
+  .modal__newAddress__form fieldset.state--multichild .form-group:not(:last-child) {
+    margin-bottom: 4px; }
+  .modal__newAddress__form fieldset.state--multichild .advice {
+    top: -2px; }
+  .modal__newAddress__form .form-group .row {
+    display: flex;
+    align-content: center;
+    justify-content: flex-end; }
+  .modal__newAddress__form .form-group:not(:last-child) {
+    margin-bottom: 12px; }
+  .modal__newAddress__form .form-group:not(.wAppendix) .row > .left {
+    width: 50%; }
+  .modal__newAddress__form .form-group:not(.wAppendix) .row > .right {
+    width: 50%; }
+  .modal__newAddress__form .form-group.wAppendix .row > .left {
+    width: 40%; }
+  .modal__newAddress__form .form-group.wAppendix .row > .right {
+    width: 40%; }
+  .modal__newAddress__form .form-group.wAppendix .row > .appendix {
+    width: 20%;
+    padding-left: 12px; }
+  .modal__newAddress__form .form-group [type="checkbox"] {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .modal__newAddress__form .form-group .input[readonly] .asis,
+  .modal__newAddress__form .form-group .input[disabled] .asis {
+    cursor: text; }
+  .modal__newAddress__form .form-group .input[readonly]:not(.asis),
+  .modal__newAddress__form .form-group .input[disabled]:not(.asis) {
+    background-color: #f6f6f6;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: default; }
+    .modal__newAddress__form .form-group .input[readonly]:not(.asis):focus,
+    .modal__newAddress__form .form-group .input[disabled]:not(.asis):focus {
+      border-color: #888; }
+  .modal__newAddress__form .button {
+    line-height: 1;
+    border: none;
+    outline: none;
+    box-shadow: none; }
+    .modal__newAddress__form .button--primary {
+      background-color: #0057E5;
+      color: #fff; }
+      .modal__newAddress__form .button--primary:hover, .modal__newAddress__form .button--primary:focus {
+        background-color: #1970ff; }
+  .modal__newAddress__form .label,
+  .modal__newAddress__form .input {
+    font-size: 100%; }
+  .modal__newAddress__form .label {
+    line-height: 1;
+    width: 100%;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    background-color: #f6f6f6;
+    font-weight: bold;
+    color: #002; }
+    .modal__newAddress__form .label.align-left {
+      text-align: left; }
+    .modal__newAddress__form .label.align-right {
+      text-align: right; }
+  .modal__newAddress__form .input {
+    line-height: 115%;
+    width: 100%;
+    display: block;
+    padding: 8px;
+    border: 1px solid #dedede;
+    transition: border-color 0.3s, color 0.3s, background-color 0.3s; }
+    .modal__newAddress__form .input:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: #0057E5; }
+    .modal__newAddress__form .input.hidden {
+      display: none; }
+  .modal__newAddress__form textarea {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 5em;
+    max-height: 320px; }
+  .modal__newAddress__form fieldset:not(:last-child) {
+    margin-bottom: 12px; }
+  .modal__newAddress__form select.input {
+    padding: 7px 8px; }
+  .modal__newAddress__form .input--checkbox {
+    margin: 1px 8px 1px 0; }
+  .modal__newAddress__form .button {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer; }
+    .modal__newAddress__form .button--block {
+      display: block;
+      width: 100%; }
+  .modal__newAddress__form .helper-block {
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.5; }
+    .modal__newAddress__form .helper-block:first-line {
+      line-height: 1; }
+    .modal__newAddress__form .helper-block p:not(:last-child) {
+      margin-bottom: 0.5em; }
+    .modal__newAddress__form .helper-block a {
+      color: #66a0ff; }
+      .modal__newAddress__form .helper-block a:hover {
+        text-decoration: underline; }
+  .modal__newAddress__form .notice:not(:last-child) {
+    margin-bottom: 12px; }
+  .modal__newAddress__form .inputContainer {
+    position: relative; }
+  .modal__newAddress__form .inputAppendixButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 33px;
+    text-align: center;
+    background-color: #0057E5;
+    color: #fff;
+    line-height: 33px;
+    display: block;
+    cursor: pointer;
+    z-index: 1; }
+    .modal__newAddress__form .inputAppendixButton:hover {
+      background-color: #1970ff; }
+  .modal__newAddress__form .multisigKeysFieldsetCollection {
+    padding: 18px;
+    border: 1px solid #e5efff; }
+    .modal__newAddress__form .multisigKeysFieldsetCollection legend {
+      color: #002;
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: bold;
+      display: block; }
+    .modal__newAddress__form .multisigKeysFieldsetCollection .form-group-collection {
+      counter-reset: section; }
+      .modal__newAddress__form .multisigKeysFieldsetCollection .form-group-collection > li {
+        list-style-type: none;
+        position: relative; }
+
+.typeSelectElementProxy .icon {
+  line-height: 31px; }
+
+/*# sourceMappingURL=style.css.map */

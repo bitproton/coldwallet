@@ -1,0 +1,77 @@
+@import '../../../../../../../../scss/mixins/_card'; /* public/scss/.. */
+@import '../../../../../../../../scss/mixins/_pane'; /* public/scss/.. */
+@import '../../../../../../../../scss/mixins/_monospace'; /* public/scss/.. */
+@import '../../../../../../../../scss/mixins/_form'; /* public/scss/.. */
+
+.modal__addressDetails {
+	@include pane(
+		$prefix: 'modal__addressDetails',
+		$contentPadding: 18px
+	);
+	@include card(
+		$padding: 0
+	);
+
+	width:960px;
+	font-size:13px;
+	margin:18px;
+
+	.modal__addressDetails__header {
+		background-color:#0057e5;
+		color:#fff;
+		border:none;
+		position:relative;
+	}
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+
+	    &:hover {
+	    	background-color:rgba(255,255,255,0.1);
+	    }
+	}
+
+	.addressDetailsForm {
+		@include form--std(
+			$sectionMargin: 18px
+		);
+	}
+
+	.qrCodeWrapper {
+		text-align:center;
+		margin-bottom:18px;
+
+		a {
+			display:inline-block;
+		}
+	}
+
+	.inputContainer {
+		position:relative;
+	}
+
+	.inputAppendixButton {
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		width:33px;
+		text-align:center;
+		background-color: #0057E5;
+    	color: #fff;
+    	line-height:33px;
+    	display:block;
+    	cursor:pointer;
+    	z-index:1;
+
+    	&:hover {
+    		background-color:lighten(#0057E5, 10%);
+    	}
+    }
+}

@@ -1,0 +1,17 @@
+<li>
+	<div class="form-group js__formGroup" for="wallet_new_address_multisigkeys_{{ index }}">
+		<div class="row">
+			<div class="left">
+				<label for="wallet_new_address_multisigkeys_{{ index }}" class="label">#{{ index+1 }}</label>
+			</div>
+			<div class="right">
+				<div class="inputContainer">
+					<input id="wallet_new_address_multisigkeys_{{ index }}" name="wallet_new_address[multisigkeys][{{ index }}]" type="text" class="input js__input" org-validate="@notblank && @bitcoinprivatekey">
+					<a class="inputAppendixButton js__removeMultisigKey" title="Remove this key">
+						<i class="fa fa-minus"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</li>

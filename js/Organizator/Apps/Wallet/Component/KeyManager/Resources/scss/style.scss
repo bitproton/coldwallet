@@ -1,0 +1,94 @@
+@import '../../../../../../../../scss/mixins/_card'; /* public/scss/.. */
+@import '../../../../../../../../scss/mixins/_pane'; /* public/scss/.. */
+@import '../../../../../../../../scss/mixins/_monospace'; /* public/scss/.. */
+@import '../../../../../../../../scss/mixins/_form'; /* public/scss/.. */
+
+.modal__newAddress {
+	@include pane(
+		$prefix: 'modal__newAddress',
+		$contentPadding: 18px
+	);
+	@include card(
+		$padding: 0
+	);
+
+	width:960px;
+	margin:18px;
+	font-size:13px;
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+
+	    &:hover {
+	    	background-color:rgba(255,255,255,0.1);
+	    }
+	}
+
+	.modal__newAddress__header {
+		background-color:#0057e5;
+		color:#fff;
+		border:none;
+		position:relative;
+	}
+}
+
+.modal__newAddress__form {
+	@include form--std;
+
+	.inputContainer {
+		position:relative;
+	}
+
+	.inputAppendixButton {
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		width:33px;
+		text-align:center;
+		background-color: #0057E5;
+    	color: #fff;
+    	line-height:33px;
+    	display:block;
+    	cursor:pointer;
+    	z-index:1;
+
+    	&:hover {
+    		background-color:lighten(#0057E5, 10%);
+    	}
+	}
+
+	.multisigKeysFieldsetCollection {
+		padding: 18px;
+	    border: 1px solid lighten(#0057e5, 50%);
+
+	    legend {
+    	    color: #002;
+		    padding: 0 10px;
+		    font-size: 13px;
+		    font-weight: bold;
+	    	display:block;
+		}
+		
+		.form-group-collection {
+			counter-reset: section;
+
+			> li {
+				list-style-type: none;
+				position:relative;
+			}
+		}
+	}
+}
+
+.typeSelectElementProxy {
+    .icon {
+	    line-height:31px;
+	}
+}

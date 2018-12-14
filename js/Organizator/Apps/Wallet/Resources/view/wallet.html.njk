@@ -1,0 +1,56 @@
+<div class="wallet js__wallet">
+      <div class="wallet__header">
+        
+        <div class="logo">
+          <img src="assets/bitproton-coldwallet-logo.svg" alt="Bitproton ColdWallet"></a>
+        </div>
+
+        <ul class="wallet__actionbar">
+          <li>
+            <a href="#" class="js__changePassword"><i class="fa fa-lock"></i> Change Password</a>
+          </li>
+          <li>
+            <a href="#" class="js__newAddress"><i class="fa fa-plus-square"></i> Import Address</a>
+          </li>
+          <li>
+            <a href="#" class="js__signTransaction"><i class="fa fa-pencil-square"></i> Sign a Transaction</a>
+          </li>
+        </ul>
+      </div>
+      <div class="wallet__content">
+        <div class="wallet__left">
+          <div class="wallet__left__header">
+            Addresses
+          </div>
+
+          <div class="wallet__addresses">
+            <div class="addressCollection js__addressCollection {{ 'hide' if wallet.addresses|length == 0 }}">
+              {% for address in wallet.addresses %}
+                {% include 'js/Organizator/Apps/Wallet/Resources/view/address-card.html.njk' %}
+              {% endfor %}
+            </div>
+            <div class="addressCollectionSectionIfEmpty js__addressCollectionSectionIfEmpty {{ 'hide' if wallet.addresses|length > 0 }}">
+              You have no address &middot; <a href="#" class="js__newAddress">Add one?</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="wallet__right">
+          <div class="wallet__right__header">
+            Recent Transactions <a class="cleartxhistorybutton js__clearTxHistory" type="button" title="Clear transaction history">clear</a>
+          </div>
+          <div class="wallet__transactions js__transactions">
+
+            <div class="transactionCollection js__transactionCollection {{ 'hide' if wallet.transactions|length == 0 }}">
+              {% for transaction in wallet.transactions %}
+                {% include 'js/Organizator/Apps/Wallet/Resources/view/transaction-card.html.njk' %}
+              {% endfor %}
+            </div>
+
+            <div class="transactionsSectionIfEmpty {{ 'hide' if wallet.transactions|length > 0 }}">
+              Signed transactions will be shown here
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

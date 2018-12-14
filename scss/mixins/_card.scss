@@ -1,0 +1,17 @@
+@mixin card(
+		$padding: 12px, 
+		$background: #fff, 
+		$box-shadow: 0 2px 2px rgba(0,0,0,0.15),
+		$border-top:none,
+		$border-right:none,
+		$border-bottom:none,
+		$border-left:none
+	) {
+	padding: $padding;
+	background: $background;
+	box-shadow: $box-shadow;
+	border-top: $border-top;
+	border-right: $border-right;
+	border-bottom: $border-bottom;
+	border-left: $border-left;
+}

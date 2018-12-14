@@ -1,0 +1,52 @@
+<div class="modal__addressDetails">
+	<div class="modal__addressDetails__header">
+		Address Details
+		<span class="modalCloseButton js__modalcloser"><i class="fa fa-times"></i></span>
+	</div>
+	<div class="modal__addressDetails__content">
+		<div class="addressDetailsForm">
+
+			<div class="form-group">
+				<div class="row">
+					<div class="left">
+						<label class="label">Private Key (WIF)</label>
+					</div>
+					<div class="right">
+					<div class="inputContainer">
+						<input type="password" class="input" value="{{ keypair.privatekey }}" readonly>
+						<a class="inputAppendixButton js__showPassword">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group {{ 'hide' if keypair.type === 'multisig' }}">
+				<div class="row">
+					<div class="left">
+						<label class="label">Bitcoin Address</label>
+					</div>
+					<div class="right">
+						<input type="text" class="input" value="{{ keypair.address }}" readonly>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="row">
+					<div class="left">
+						<label class="label">QR Code</label>
+					</div>
+					<div class="right">
+						<div class="input qrCodeWrapper">
+							<a href="bitcoinsv:{{ keypair.address }}">
+								<canvas class="qrCode"></canvas>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

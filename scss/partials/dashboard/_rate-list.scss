@@ -1,0 +1,29 @@
+.rates__label {
+	color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 12px;
+    font-size: 15px;
+    border-bottom:1px solid #dedede;
+    padding-bottom:4px;
+    text-align:right;
+}
+
+.rateList {
+	@include flat-list;
+
+	font-size:14px;
+	color:rgba(0,0,0,0.5);
+
+	li {
+		display:flex;
+		align-contents:space-between;
+
+		.row__right {
+			flex:1;
+			text-align:right;
+		}
+
+		&:not(:last-child){
+			margin-bottom:12px;
+		}
+	}
+}

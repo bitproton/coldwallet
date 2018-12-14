@@ -1,0 +1,59 @@
+<div class="txPreview">
+  <div class="vin">
+    <div class="heading">From <span style="float:right;">Amount</span></div>
+    <ul class="vinvoutList">
+        {% for input in transaction.vin %}
+            <li data-object-txid="{{ input.txid }}" data-object-vout="{{ input.vout }}">
+              <div class="addresses {{ 'multisig' if input.addresses|length > 1 }}">
+                {% for address in input.scriptPubKey.addresses %}
+                  {% if (input.flags and 'canSign' in input.flags) %}<i class="fa fa-check" title="You can sign this input"></i>{% endif %} <span>{{ address }}</span> <br>
+                {% else %}
+                  <span>Address couldn't be decoded</span>
+                {% endfor %}
+              </div>
+              <div class="value">{{ (input.value / 100000000)|number_format(8, '.', ',') }}</div>
+            </li>
+        {% endfor %}
+    </ul>
+  </div>
+
+  <div class="vout">
+    <div class="heading">To</div>
+    <ul class="vinvoutList">
+      {% for output in transaction.vout %}
+        <li>
+          <div class="addresses {{ 'multisig' if output.scriptPubKey.addresses|length > 1 }}">
+            {% for address in output.scriptPubKey.addresses %}
+              <span>{{ address }} {{ '(change)' if (output.flags and 'change' in output.flags) }}</span> <br>
+            {% endfor %}
+          </div>
+          <div class="value">{{ (output.value / 100000000)|number_format(8, '.', ',') }}</div>
+        </li>
+      {% endfor %}
+      <li>
+        <div class="addresses">
+          Network Fee
+        </div>
+        <div class="value">{{ (transaction.fee / 100000000)|number_format(8, '.', ',') }}</div>
+      </li>
+    </ul>
+  </div>
+  <div class="summary">
+    <div class="heading">Summary</div>
+    <ul class="vinvoutList">
+      <li>
+        <div class="addresses">Total</div>
+        <div class="value">{{ (transaction.totalSpent / 100000000)|number_format(8, '.', ',') }}</div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% if transaction.signable == false %}
+  <div class="adviceRow">
+    <div class="advice advice--red">
+        <ul class="adviceList">
+            <li>You don't have all required keys to sign this transaction.</li>
+        </ul>
+      </div>
+  </div>
+{% endif %}

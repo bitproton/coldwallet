@@ -1,0 +1,89 @@
+.selectElementProxy {
+  border: 1px solid #dedede;
+  position: relative;
+  z-index: 9;
+  user-select: none;
+  transition: all 0.2s; }
+  .selectElementProxy.state--open:not(.reversed) {
+    border-top-color: #0057E5;
+    border-right-color: #0057E5;
+    border-left-color: #0057E5; }
+  .selectElementProxy.state--open.reversed {
+    border-bottom-color: #0057E5;
+    border-right-color: #0057E5;
+    border-left-color: #0057E5; }
+  .selectElementProxy.state--open .optionsContainerPositioner--relative {
+    position: relative; }
+  .selectElementProxy.state--open .optionsContainerPositioner--fixed {
+    position: fixed;
+    overflow: visible;
+    background-color: #fff; }
+  .selectElementProxy.state--open .optionsContainer {
+    z-index: 99;
+    visibility: visible;
+    border-color: #0057E5;
+    height: initial;
+    overflow: initial; }
+  .selectElementProxy.state--open .icon {
+    background-color: #f6f6f6; }
+  .selectElementProxy.state--open .front {
+    opacity: 0.5; }
+  .selectElementProxy .optionsContainer {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -99;
+    border-style: solid;
+    border-color: #dedede;
+    background-color: #fff;
+    visibility: hidden;
+    transition: border-color 0.2s; }
+    .selectElementProxy .optionsContainer .header {
+      background-color: #f6f6f6;
+      padding: 6px 10px;
+      color: rgba(0, 0, 0, 0.25);
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      border-top: 1px solid #dedede;
+      border-bottom: 1px solid #dedede; }
+  .selectElementProxy:not(.reversed) .optionsContainer {
+    top: 100%;
+    border-width: 0 1px 1px 1px; }
+  .selectElementProxy.reversed .optionsContainer {
+    bottom: 100%;
+    border-width: 1px 1px 0 1px; }
+  .selectElementProxy .option {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 9px 10px;
+    cursor: pointer; }
+    .selectElementProxy .option.front {
+      transition: opacity 0.2s; }
+    .selectElementProxy .option:not(.front):hover {
+      background-color: #0057e5;
+      color: #fff; }
+    .selectElementProxy .option:not(.front):not(:last-child) {
+      border-bottom: 1px solid #dedede; }
+      .selectElementProxy .option:not(.front):not(:last-child):hover {
+        border-color: #0057e5; }
+    .selectElementProxy .option .icon {
+      width: 17px;
+      border-left: 1px solid #dedede;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      text-align: center; }
+  .selectElementProxy.reversed .option:not(.front) {
+    border-bottom: 1px solid #dedede; }
+    .selectElementProxy.reversed .option:not(.front):hover {
+      border-color: #0057e5; }
+  .selectElementProxy:hover .icon {
+    background-color: #fafafa; }
+
+/*# sourceMappingURL=style.css.map */

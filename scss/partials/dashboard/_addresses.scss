@@ -1,0 +1,125 @@
+@import '../../mixins/_monospace';
+
+.wallet__addresses {
+	flex:auto;
+	overflow-y: auto;
+	min-height: 0px;
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	position:relative;
+	
+	.actionbar {
+		transition:all 0.2s;
+		text-align:right;
+		
+		.button {
+			font-size:12px;
+			font-weight:bold;
+		    cursor:pointer;
+		    border:none;
+		    color:#fff;
+		    padding: 3px 8px;
+		    line-height: 1.5;
+		    border-radius: 2px;
+	        box-shadow: 0 3px 2px -2px rgba(0,0,0,0.35);
+	        opacity:0.5;
+	        transition:all 0.2s;
+
+		    &:hover {
+				opacity:1;
+		    }
+
+		    &--blue {
+			    background-color: #0057E5;
+
+			    &:hover {
+			    	background-color:lighten(#002D94, 10%);
+			    }
+		    }
+
+		    &--red {
+			    background-color: #772200;
+
+			    &:hover {
+			    	background-color:lighten(#942D00, 10%);
+			    }
+		    }
+	    }
+	}
+}
+
+.wallet__addresses__header {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.addressCollection {
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -2px;
+}
+
+.addressCard {
+	display:flex;
+	align-items:center;
+	border-bottom:1px solid #dedede;
+	background-color:#fff;
+
+	&:hover {
+		background-color:#f6f6f6;
+	}
+}
+
+.addressCard__left {
+	flex:1;
+	padding:18px;
+
+	.addressLabel {
+	    margin-bottom: 5px;
+	    text-transform: uppercase;
+	    font-size: 13px;
+	    letter-spacing: 0.5px;
+	    font-weight:bold;
+	    color:rgba(0,0,0,0.75);
+	}
+
+	.addressAddress {
+		@include monospace;
+		
+		color:rgba(0,0,0,0.5);
+	}
+}
+
+.addressCard__right {
+	flex:1;
+	padding:18px;
+}
+
+.addresses__content {
+	flex:1;
+	overflow-y:scroll;
+	position:relative;
+	flex: 1 1 auto;
+	overflow-y: auto;
+	min-height: 0px;
+}
+
+.addressCollectionSectionIfEmpty {
+	text-align:center;
+	position:absolute;
+	left:0;
+	width:100%;
+	top:50%;
+	margin-top:-0.5em;
+	color:rgba(0,0,0,0.5);
+
+	a {
+		color:#0057E5;
+
+		&:hover {
+			text-decoration:underline;
+		}
+	}
+}

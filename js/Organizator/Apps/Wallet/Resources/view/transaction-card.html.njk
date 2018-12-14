@@ -1,0 +1,15 @@
+<div class="transactionCard js__transactionCard js__tx" data-object="transaction" data-object-txid="{{ transaction.txid }}">
+	<div class="transactionCard__date">
+			{{ transaction.time|date('Y-m-d H:i') }}</span>
+	</div>
+	<div class="transactionCard__details">
+		<div class="heading">
+			<i class="fa fa-arrow-right"></i> Sent
+		</div>
+	</div>
+	<div class="transactionCard__valueDetails negative">
+		<div class="base">
+			<span class="value">{{ (transaction.totalSpent / 100000000)|number_format(8) }}</span> <span class="abbr"></span>
+		</div>
+	</div>
+</div>

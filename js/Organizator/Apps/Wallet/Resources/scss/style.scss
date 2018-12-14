@@ -1,0 +1,431 @@
+@import '../../../../../../scss/mixins/_card'; /* public/scss/.. */
+@import '../../../../../../scss/mixins/_pane'; /* public/scss/.. */
+@import '../../../../../../scss/mixins/_monospace'; /* public/scss/.. */
+@import '../../../../../../scss/mixins/_form'; /* public/scss/.. */
+
+.modal__transaction {
+	@include pane(
+		$prefix: 'modal__transaction',
+		$contentPadding: 18px
+	);
+	@include card(
+		$padding: 0
+	);
+
+	width:960px;
+	margin:18px;
+	font-size:13px;
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+
+	    &:hover {
+	    	background-color:rgba(255,255,255,0.1);
+	    }
+	}
+
+	.modal__transaction__header {
+		background-color:#0057e5;
+		color:#fff;
+		border:none;
+		position:relative;
+	}
+}
+
+.modal__transaction__form {
+	@include form--std;
+}
+
+.modal__addressDetails {
+	@include pane(
+		$prefix: 'modal__addressDetails',
+		$contentPadding: 18px
+	);
+	@include card(
+		$padding: 0
+	);
+
+	width:960px;
+	font-size:13px;
+	margin:18px;
+
+	.modal__addressDetails__header {
+		background-color:#0057e5;
+		color:#fff;
+		border:none;
+		position:relative;
+	}
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+
+	    &:hover {
+	    	background-color:rgba(255,255,255,0.1);
+	    }
+	}
+
+	.addressDetailsForm {
+		@include form--std(
+			$sectionMargin: 18px
+		);
+	}
+
+	.qrCodeWrapper {
+		text-align:center;
+		margin-bottom:18px;
+
+		a {
+			display:inline-block;
+		}
+	}
+
+	.inputContainer {
+		position:relative;
+	}
+
+	.inputAppendixButton {
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		width:33px;
+		text-align:center;
+		background-color: #0057E5;
+    	color: #fff;
+    	line-height:33px;
+    	display:block;
+    	cursor:pointer;
+    	z-index:1;
+
+    	&:hover {
+    		background-color:lighten(#0057E5, 10%);
+    	}
+    }
+}
+
+.modal__newAddress {
+	@include pane(
+		$prefix: 'modal__newAddress',
+		$contentPadding: 18px
+	);
+	@include card(
+		$padding: 0
+	);
+
+	width:960px;
+	margin:18px;
+	font-size:13px;
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+
+	    &:hover {
+	    	background-color:rgba(255,255,255,0.1);
+	    }
+	}
+
+	.modal__newAddress__header {
+		background-color:#0057e5;
+		color:#fff;
+		border:none;
+		position:relative;
+	}
+}
+
+.modal__newAddress__form {
+	@include form--std;
+
+	.inputContainer {
+		position:relative;
+	}
+
+	.inputAppendixButton {
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		width:33px;
+		text-align:center;
+		background-color: #0057E5;
+    	color: #fff;
+    	line-height:33px;
+    	display:block;
+    	cursor:pointer;
+    	z-index:1;
+
+    	&:hover {
+    		background-color:lighten(#0057E5, 10%);
+    	}
+	}
+
+	.multisigKeysFieldsetCollection {
+		padding: 18px;
+	    border: 1px solid lighten(#0057e5, 50%);
+
+	    legend {
+    	    color: #002;
+		    padding: 0 10px;
+		    font-size: 13px;
+		    font-weight: bold;
+	    	display:block;
+		}
+		
+		.form-group-collection {
+			counter-reset: section;
+
+			> li {
+				list-style-type: none;
+				position:relative;
+			}
+		}
+	}
+
+	.typeSelectElementProxy {
+	    .icon {
+		    line-height:31px;
+		}
+	}
+}
+
+.modal__txSignForm {
+	@include pane(
+		$prefix: 'modal__txSignForm',
+		$contentPadding: 0
+	);
+	@include card(
+		$padding: 0
+	);
+
+	width:960px;
+	font-size:13px;
+	margin:18px;
+
+	.modal__txSignForm__header {
+		background-color:#0057e5;
+		color:#fff;
+		border:none;
+		position:relative;
+	}
+
+	.modalCloseButton {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    padding: 12px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    font-size: 12px;
+
+	    &:hover {
+	    	background-color:rgba(255,255,255,0.1);
+	    }
+	}
+
+	.signTransactionForm {
+		@include form--std(
+			$sectionMargin: 18px
+		);
+
+		padding:18px;
+	}
+
+	.stepsbar {
+		.breadcrumbs {
+			list-style:none;
+			font-size:14px;
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+			padding:0 18px;
+
+			&:after {
+				content:"";
+				clear:both;
+				display:table;
+			}
+
+			li {
+				float:left;
+				opacity:0.5;
+				transition: all 0.2s;
+
+				// &:hover,
+				&.active {
+					opacity:1;
+				}
+
+				&:not(:last-child){
+					margin-right:12px;
+
+					a:after {
+					    content: "\2192";
+					    float: right;
+					    margin-left: 12px;
+					    color: rgba(0, 45, 148, 0.5);
+					}
+				}
+
+				a {
+					cursor:default;
+				    font-weight: bold;
+				    display:block;
+				    padding:14px 0;
+				    color:#002d94;
+				}
+			}
+		}
+	}
+
+	.steps__content {
+		width:100%;
+		max-width:100%;
+		overflow:hidden;
+	}
+
+	.steps__slider {
+		position:relative;
+		white-space:nowrap;
+		transition:all 0.2s;
+		left:0%;
+	}
+
+	.step__content {
+		width:100%;
+		display:inline-block;
+		vertical-align:top;
+		white-space:initial;
+
+		&.discard {
+			height:1px;
+			overflow:hidden;
+		}
+	}
+
+	.actionbar .right {
+		text-align:right;
+	}
+
+	.userCheckList {
+		list-style:none;
+
+		li {
+			border-style:solid;
+			border-color:#dedede;
+			border-width:1px 1px 0 1px;
+
+			&:last-child{
+				border-bottom-width:1px;
+			}
+		}
+
+	    label {
+	    	cursor:pointer;
+	    }
+
+		.header {
+			background-color: #f6f6f6;
+		    border-bottom: 1px solid #dedede;
+		    display: flex;
+		    align-items:center;
+		    font-weight: bold;
+		}
+
+		.id {
+			padding: 10px;
+		    border-right: 1px solid #dedede;
+		    border-radius: 50%;
+		}
+
+		.title {
+			padding: 10px;
+			flex-grow:1;
+		}
+
+		.checkbox {
+			padding:10px;
+
+			[type="checkbox"]{
+				margin:0;
+				padding:0;
+			}
+		}
+
+		.content {
+		    padding: 10px;
+		    border-top: 0;
+		    max-height:320px;
+		    transition:padding 0.2s, max-height 0.2s, height 0.2s, border 0.2s;
+		    white-space: initial;
+		    line-height: 1.5;
+		    border-bottom: none;
+		    overflow:auto;
+
+		    a {
+		    	color:#002d94;
+
+		    	&:hover {
+		    		text-decoration:underline;
+		    	}
+		    }
+
+		    kbd, 
+		    mark {
+		    	background-color: #f6f6f6;
+			    border: 1px solid #dedede;
+			    padding: 1px 3px;
+			    border-radius: 2px;
+			    font-weight: bold;
+		    }
+
+		    p {
+		    	&:not(:last-child){
+		    		margin-bottom:10px;
+		    	}
+
+		    	&.note {
+		    		color:rgba(0,0,0,0.5);
+		    		border-left: 2px solid #dedede;
+				    padding-left: 10px;
+				    padding-right: 20px;
+		    	}
+		    }
+		}
+
+		li.completed {
+			.content {
+				max-height:0;
+				padding-top:0;
+				padding-bottom:0;
+				overflow:hidden;
+			}
+
+			.title {
+				text-decoration:line-through;
+			}
+				
+			.header {
+				border-bottom:none;
+			}
+
+			&:not(:last-child){
+				border-bottom:none;
+			}
+		}
+	}
+}

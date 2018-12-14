@@ -1,0 +1,30 @@
+.pageNav nav {
+	color:rgba(#002D94,1);
+	font-size:15px;
+
+	@include card(
+		$padding: 0
+	);
+
+	ul {
+		@include flat-list;
+		@include clear-fix;
+
+		li {
+			float:left;
+			opacity:0.5;
+			transition:all 0.2s;
+		
+			&.active,
+			&:hover {
+				opacity:1;
+			}
+
+			a {
+				font-weight:bold;
+				padding: 18px;
+				display:block;
+			}
+		}
+	}
+}

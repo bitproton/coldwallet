@@ -1,0 +1,270 @@
+/* public/scss/.. */
+/* public/scss/.. */
+/* public/scss/.. */
+/* public/scss/.. */
+.modal__txSignForm {
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  width: 960px;
+  font-size: 13px;
+  margin: 18px; }
+  .modal__txSignForm .modal__txSignForm__header {
+    padding: 12px 18px;
+    border-bottom: 1px solid #dedede;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px; }
+  .modal__txSignForm .modal__txSignForm__content {
+    padding: 0; }
+  .modal__txSignForm .modal__txSignForm__header {
+    background-color: #0057e5;
+    color: #fff;
+    border: none;
+    position: relative; }
+  .modal__txSignForm .modalCloseButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px; }
+    .modal__txSignForm .modalCloseButton:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+  .modal__txSignForm .signTransactionForm {
+    font-size: inherit;
+    padding: 18px; }
+    .modal__txSignForm .signTransactionForm fieldset .form-group-collection {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+    .modal__txSignForm .signTransactionForm fieldset.state--multichild .form-group-collection > li:not(:last-child) {
+      margin-bottom: 18px; }
+    .modal__txSignForm .signTransactionForm fieldset.state--multichild .form-group:not(:last-child) {
+      margin-bottom: 6px; }
+    .modal__txSignForm .signTransactionForm fieldset.state--multichild .advice {
+      top: -3px; }
+    .modal__txSignForm .signTransactionForm .form-group .row {
+      display: flex;
+      align-content: center;
+      justify-content: flex-end; }
+    .modal__txSignForm .signTransactionForm .form-group:not(:last-child) {
+      margin-bottom: 18px; }
+    .modal__txSignForm .signTransactionForm .form-group:not(.wAppendix) .row > .left {
+      width: 50%; }
+    .modal__txSignForm .signTransactionForm .form-group:not(.wAppendix) .row > .right {
+      width: 50%; }
+    .modal__txSignForm .signTransactionForm .form-group.wAppendix .row > .left {
+      width: 40%; }
+    .modal__txSignForm .signTransactionForm .form-group.wAppendix .row > .right {
+      width: 40%; }
+    .modal__txSignForm .signTransactionForm .form-group.wAppendix .row > .appendix {
+      width: 20%;
+      padding-left: 12px; }
+    .modal__txSignForm .signTransactionForm .form-group [type="checkbox"] {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .modal__txSignForm .signTransactionForm .form-group .input[readonly] .asis,
+    .modal__txSignForm .signTransactionForm .form-group .input[disabled] .asis {
+      cursor: text; }
+    .modal__txSignForm .signTransactionForm .form-group .input[readonly]:not(.asis),
+    .modal__txSignForm .signTransactionForm .form-group .input[disabled]:not(.asis) {
+      background-color: #f6f6f6;
+      color: rgba(0, 0, 0, 0.5);
+      cursor: default; }
+      .modal__txSignForm .signTransactionForm .form-group .input[readonly]:not(.asis):focus,
+      .modal__txSignForm .signTransactionForm .form-group .input[disabled]:not(.asis):focus {
+        border-color: #888; }
+    .modal__txSignForm .signTransactionForm .button {
+      line-height: 1;
+      border: none;
+      outline: none;
+      box-shadow: none; }
+      .modal__txSignForm .signTransactionForm .button--primary {
+        background-color: #0057E5;
+        color: #fff; }
+        .modal__txSignForm .signTransactionForm .button--primary:hover, .modal__txSignForm .signTransactionForm .button--primary:focus {
+          background-color: #1970ff; }
+    .modal__txSignForm .signTransactionForm .label,
+    .modal__txSignForm .signTransactionForm .input {
+      font-size: 100%; }
+    .modal__txSignForm .signTransactionForm .label {
+      line-height: 1;
+      width: 100%;
+      display: block;
+      text-align: right;
+      padding: 10px;
+      background-color: #f6f6f6;
+      font-weight: bold;
+      color: #002; }
+      .modal__txSignForm .signTransactionForm .label.align-left {
+        text-align: left; }
+      .modal__txSignForm .signTransactionForm .label.align-right {
+        text-align: right; }
+    .modal__txSignForm .signTransactionForm .input {
+      line-height: 115%;
+      width: 100%;
+      display: block;
+      padding: 8px;
+      border: 1px solid #dedede;
+      transition: border-color 0.3s, color 0.3s, background-color 0.3s; }
+      .modal__txSignForm .signTransactionForm .input:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #0057E5; }
+      .modal__txSignForm .signTransactionForm .input.hidden {
+        display: none; }
+    .modal__txSignForm .signTransactionForm textarea {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      min-height: 5em;
+      max-height: 320px; }
+    .modal__txSignForm .signTransactionForm fieldset:not(:last-child) {
+      margin-bottom: 18px; }
+    .modal__txSignForm .signTransactionForm select.input {
+      padding: 7px 8px; }
+    .modal__txSignForm .signTransactionForm .input--checkbox {
+      margin: 1px 8px 1px 0; }
+    .modal__txSignForm .signTransactionForm .button {
+      padding: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer; }
+      .modal__txSignForm .signTransactionForm .button--block {
+        display: block;
+        width: 100%; }
+    .modal__txSignForm .signTransactionForm .helper-block {
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 1.5; }
+      .modal__txSignForm .signTransactionForm .helper-block:first-line {
+        line-height: 1; }
+      .modal__txSignForm .signTransactionForm .helper-block p:not(:last-child) {
+        margin-bottom: 0.5em; }
+      .modal__txSignForm .signTransactionForm .helper-block a {
+        color: #66a0ff; }
+        .modal__txSignForm .signTransactionForm .helper-block a:hover {
+          text-decoration: underline; }
+    .modal__txSignForm .signTransactionForm .notice:not(:last-child) {
+      margin-bottom: 18px; }
+  .modal__txSignForm .stepsbar .breadcrumbs {
+    list-style: none;
+    font-size: 14px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    padding: 0 18px; }
+    .modal__txSignForm .stepsbar .breadcrumbs:after {
+      content: "";
+      clear: both;
+      display: table; }
+    .modal__txSignForm .stepsbar .breadcrumbs li {
+      float: left;
+      opacity: 0.5;
+      transition: all 0.2s; }
+      .modal__txSignForm .stepsbar .breadcrumbs li.active {
+        opacity: 1; }
+      .modal__txSignForm .stepsbar .breadcrumbs li:not(:last-child) {
+        margin-right: 12px; }
+        .modal__txSignForm .stepsbar .breadcrumbs li:not(:last-child) a:after {
+          content: "\2192";
+          float: right;
+          margin-left: 12px;
+          color: rgba(0, 45, 148, 0.5); }
+      .modal__txSignForm .stepsbar .breadcrumbs li a {
+        cursor: default;
+        font-weight: bold;
+        display: block;
+        padding: 14px 0;
+        color: #002d94; }
+  .modal__txSignForm .steps__content {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; }
+  .modal__txSignForm .steps__slider {
+    position: relative;
+    white-space: nowrap;
+    transition: all 0.2s;
+    left: 0%; }
+  .modal__txSignForm .step__content {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    white-space: initial; }
+    .modal__txSignForm .step__content.discard {
+      height: 1px;
+      overflow: hidden; }
+  .modal__txSignForm .actionbar .right {
+    text-align: right; }
+  .modal__txSignForm .userCheckList {
+    list-style: none; }
+    .modal__txSignForm .userCheckList li {
+      border-style: solid;
+      border-color: #dedede;
+      border-width: 1px 1px 0 1px; }
+      .modal__txSignForm .userCheckList li:last-child {
+        border-bottom-width: 1px; }
+    .modal__txSignForm .userCheckList label {
+      cursor: pointer; }
+    .modal__txSignForm .userCheckList .header {
+      background-color: #f6f6f6;
+      border-bottom: 1px solid #dedede;
+      display: flex;
+      align-items: center;
+      font-weight: bold; }
+    .modal__txSignForm .userCheckList .id {
+      padding: 10px;
+      border-right: 1px solid #dedede;
+      border-radius: 50%; }
+    .modal__txSignForm .userCheckList .title {
+      padding: 10px;
+      flex-grow: 1; }
+    .modal__txSignForm .userCheckList .checkbox {
+      padding: 10px; }
+      .modal__txSignForm .userCheckList .checkbox [type="checkbox"] {
+        margin: 0;
+        padding: 0; }
+    .modal__txSignForm .userCheckList .content {
+      padding: 10px;
+      border-top: 0;
+      max-height: 320px;
+      transition: padding 0.2s, max-height 0.2s, height 0.2s, border 0.2s;
+      white-space: initial;
+      line-height: 1.5;
+      border-bottom: none;
+      overflow: auto; }
+      .modal__txSignForm .userCheckList .content a {
+        color: #002d94; }
+        .modal__txSignForm .userCheckList .content a:hover {
+          text-decoration: underline; }
+      .modal__txSignForm .userCheckList .content kbd,
+      .modal__txSignForm .userCheckList .content mark {
+        background-color: #f6f6f6;
+        border: 1px solid #dedede;
+        padding: 1px 3px;
+        border-radius: 2px;
+        font-weight: bold; }
+      .modal__txSignForm .userCheckList .content p:not(:last-child) {
+        margin-bottom: 10px; }
+      .modal__txSignForm .userCheckList .content p.note {
+        color: rgba(0, 0, 0, 0.5);
+        border-left: 2px solid #dedede;
+        padding-left: 10px;
+        padding-right: 20px; }
+    .modal__txSignForm .userCheckList li.completed .content {
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      overflow: hidden; }
+    .modal__txSignForm .userCheckList li.completed .title {
+      text-decoration: line-through; }
+    .modal__txSignForm .userCheckList li.completed .header {
+      border-bottom: none; }
+    .modal__txSignForm .userCheckList li.completed:not(:last-child) {
+      border-bottom: none; }
+
+/*# sourceMappingURL=style.css.map */

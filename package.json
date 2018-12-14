@@ -1,0 +1,73 @@
+{
+   "name": "coldwallet.bitproton.bsv",
+   "version": "0.1.0",
+   "main": "main.js",
+   "description": "BitProton Cold Wallet is an open-source Bitcoin SV wallet which helps you to manage your private keys and sign your transactions offline.",
+   "homepage": "https://github.com/bitproton/coldwallet",
+   "author": {
+      "name": "bitproton",
+      "email": "contact@bitproton.com"
+   },
+   "repository": "https://github.com/bitproton/coldwallet",
+   "keywords": [
+      "bitcoin",
+      "transaction",
+      "tx",
+      "sign",
+      "signing",
+      "private key",
+      "public key",
+      "createrawtransaction",
+      "decoderawtransaction",
+      "signrawtransaction",
+      "sendrawtransaction"
+   ],
+   "license": "MIT",
+   "dependencies": {
+      "bitcoincashjs-lib": "github:prayer0/bitcoincashjs-lib",
+      "electron-context-menu": "^0.9.1"
+   },
+   "build": {
+      "productName": "BitProton Cold Wallet",
+      "appId": "coldwallet.bitproton.bsv",
+      "directories": {
+         "output": "build"
+      },
+      "nsis": {
+         "oneClick": false,
+         "allowToChangeInstallationDirectory": true,
+         "runAfterFinish": true,
+         "artifactName": "${name}-${version}.${ext}",
+         "createDesktopShortcut": true
+      },
+      "portable": {
+         "artifactName": "${name}-${version}-portable.${ext}"
+      },
+      "linux": {
+         "target": [
+            {
+               "target": "deb"
+            }
+         ]
+      },
+      "win": {
+         "target": [
+            "portable",
+            "nsis"
+         ]
+      },
+      "mac": {
+         "category": "bitcoin",
+         "target": [
+            "zip",
+            "dmg"
+         ]
+      }
+   },
+   "scripts": {
+      "setup": "npm install",
+      "preview": "electron .",
+      "pack": "build --dir",
+      "dist": "build"
+   }
+}

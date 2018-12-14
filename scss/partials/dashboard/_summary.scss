@@ -1,0 +1,47 @@
+.wallet {
+	.wallet__summary {
+		padding:18px;
+		border-top:3px solid #dedede;
+
+		.summary__header {
+		    background: none;
+		    font-weight: bold;
+		    color: rgba(0, 0, 0, 0.3);
+		    text-transform: uppercase;
+		    font-size: 12px;
+		    letter-spacing: 0.5px;
+		}
+
+		.balance {
+			@include columns(2);
+
+			font-size:16px;
+			
+			.label {
+				font-size:22px;
+				margin-bottom:6px;
+			}
+
+			.address {
+				font-size:14px;
+				color:rgba(0,0,0,0.5);
+			}		
+
+			.balanceDetails {
+				text-align:right;
+
+				.base {
+					margin-bottom:6px;
+
+					.value {
+						font-size:22px;
+					}
+				}
+
+				.pair {
+					color:rgba(0,0,0,0.5);
+				}
+			}
+		}
+	}
+}

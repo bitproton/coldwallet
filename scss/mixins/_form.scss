@@ -1,0 +1,218 @@
+@mixin form--std (
+	$leftColWidth: 50%,
+	$rightColWidth: 50%,
+	$appendixColWidth: 20%,
+	$wAppendixLeftColWidth: 40%,
+	$wAppendixRightColWidth: 40%,
+	$sectionMargin: 12px
+	) {
+	font-size: inherit;
+	
+	fieldset {
+		.form-group-collection {
+			list-style:none;
+			padding:0;
+			margin:0;
+		}
+
+		&.state--multichild {
+			.form-group-collection > li {
+				&:not(:last-child){
+					margin-bottom:$sectionMargin;
+				}
+			}
+
+			.form-group {
+				&:not(:last-child){
+					margin-bottom:$sectionMargin / 3;
+				}
+			}
+
+			.advice {
+				top:$sectionMargin / 6 * -1;
+			}
+		}
+	}
+
+	.form-group {
+		.row {	
+	    	display:flex;
+	    	align-content:center;
+			justify-content: flex-end;
+		} 
+
+    	&:not(:last-child){
+    		margin-bottom: $sectionMargin;
+    	}
+
+    	&:not(.wAppendix) .row{
+	    	> .left {
+	    		width: $leftColWidth;
+	    	}
+
+	    	> .right {
+	    		width: $rightColWidth;
+	    	}
+    	}
+
+    	&.wAppendix .row{
+	    	> .left {
+	    		width: $wAppendixLeftColWidth;
+	    	}
+
+	    	> .right {
+	    		width: $wAppendixRightColWidth;
+	    	}
+
+	    	> .appendix {
+	    		width: $appendixColWidth;
+	    		padding-left:12px;
+	    	}
+    	}
+    	
+		[type="checkbox"]{
+			margin-top:0;
+			margin-bottom:0;
+		}
+
+    	.input[readonly],
+    	.input[disabled] {
+    		.asis {
+    			cursor: text;
+    		}
+
+    		&:not(.asis){
+	    		background-color:#f6f6f6;
+	    		color:rgba(0,0,0,0.5);
+	    		cursor:default;
+
+	    		&:focus {
+	    			border-color:#888;
+	    		}
+	    	}
+    	}
+    }
+
+	.button {
+		line-height:1;
+		border:none;
+		outline:none;
+		box-shadow:none;
+
+		&--primary {
+			background-color:#0057E5;
+			color:#fff;
+
+			&:hover,
+			&:focus
+			{
+				background-color:lighten(#0057E5, 10%);
+			}
+		}
+	}
+
+	.label,
+	.input {
+		font-size:100%;
+	}
+
+	.label {
+		line-height:1;
+		width:100%;
+		display:block;
+		text-align:right;
+		padding:10px;
+		background-color:#f6f6f6;
+		font-weight:bold;
+		color:#002;
+
+		&.align-left {
+			text-align:left;
+		}
+
+		&.align-right {
+			text-align:right;
+		}
+	}
+
+	.input {
+		line-height:115%;
+		width:100%;
+		display:block;
+		padding:8px;
+		border:1px solid #dedede;
+		transition:border-color 0.3s, color 0.3s, background-color 0.3s;
+
+    	&:focus {
+    		outline:none;
+    		box-shadow:none;
+    		border-color:#0057E5;
+    	}
+
+    	&.hidden {
+    		display:none;
+    	}
+	}
+
+	textarea {
+		white-space:pre-wrap;
+		word-wrap:break-word;
+		min-height:5em;
+		max-height:320px;
+	}
+
+	fieldset {
+		&:not(:last-child){
+			margin-bottom:$sectionMargin;
+		}
+	}
+
+	select.input {
+		padding:7px 8px;
+	}
+
+	.input--checkbox {
+		margin:1px 8px 1px 0;
+	}
+
+	.button {
+		padding:10px;
+		text-transform:uppercase;
+		font-weight:bold;
+		cursor:pointer;
+
+		&--block {
+			display:block;
+			width:100%;
+		}
+	}
+
+	.helper-block {
+		color:rgba(0,0,0,0.5);
+		line-height:1.5;
+
+		&:first-line {
+			line-height:1;
+		}
+
+		p {
+			&:not(:last-child){
+				margin-bottom:0.5em;
+			}
+		}
+
+		a {
+			color:lighten(#0057E5, 25%);
+
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+
+	.notice {
+		&:not(:last-child){
+			margin-bottom: $sectionMargin;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+<div class="modal__transaction">
+	<div class="modal__transaction__header">
+		Transaction
+		<span class="modalCloseButton js__modalcloser"><i class="fa fa-times"></i></span>
+	</div>
+	<div class="modal__transaction__content">
+		<form class="modal__transaction__form">
+        <div class="form-group js__formGroup">
+          <div class="row">
+            <div class="left">
+              <div class="label">Preview</div>
+            </div>
+            <div class="right txPreviewContainer">
+
+              <div class="txPreview">
+                <div class="vin">
+                  <div class="heading">From <span style="float:right;">Amount</span></div>
+                  <ul class="vinvoutList">
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="vout">
+                  <div class="heading">To</div>
+                  <ul class="vinvoutList">
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+                <div class="summary">
+                  <div class="heading">Summary</div>
+                  <ul class="vinvoutList">
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+         <div class="form-group js__formGroup" for="tx_complete_txbodysigned">
+          <div class="row">
+            <div class="left">
+              <label class="label" for="tx_complete_txbodysigned">Transaction Body (Signed)</label>
+            </div>
+            <div class="right">
+              <div class="textareaContainer">
+                <textarea id="tx_complete_txbodysigned" name="tx_complete[txbodysigned]" class="input js__input" rows="12" org-validate="@notblank && @rawtransactionhex" readonly></textarea>
+                <ul class="actionButtons" for="tx_complete_txbodysigned">
+                  <li><a href="#" data-cmd="copy">copy</a></li>
+                  <li><a href="#" data-cmd="txbodytotxt">txt</a></li>
+                  <li><a href="#" data-cmd="toqrcode">qr-code</a></li>
+                  <li><a href="#" data-cmd="txbodytojson">json</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+	</div>
+</div>

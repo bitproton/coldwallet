@@ -1,0 +1,52 @@
+<div class="modal--std">
+	<div class="modal--std__header">
+		Change Password
+		<span class="modalCloseButton js__modalcloser"><i class="fa fa-times"></i></span>
+	</div>
+	<div class="modal--std__content">
+		<form name="auth_changepassword" class="modal__changePasswordForm__form formStd" action="{{ path('form_wallet_new_address', {}, { absolute:true }) }}" method="post" autocomplete="off" spellcheck="false">
+
+			<div class="form-group js__formGroup" for="auth_changepassword_current">
+				<div class="row">
+					<div class="left">
+						<label for="auth_changepassword_current" class="label">Current Password</label>
+					</div>
+					<div class="right">
+						<input id="auth_changepassword_current" name="auth_changepassword[current]" type="password" class="input js__input" org-validate="@password">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="auth_changepassword_first">
+				<div class="row">
+					<div class="left">
+						<label for="auth_changepassword_first" class="label">New Password</label>
+					</div>
+					<div class="right">
+						<input id="auth_changepassword_first" name="auth_changepassword[first]" type="password" class="input js__input" org-validate="@length(min=8, max=4096) && @same(with='#auth_changepassword_second', base=true)">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="auth_changepassword_second">
+				<div class="row">
+					<div class="left">
+						<label for="auth_changepassword_second" class="label">New Password (again)</label>
+					</div>
+					<div class="right">
+						<input id="auth_changepassword_second" name="auth_changepassword[second]" type="password" class="input js__input" org-validate="@notblank && @same(with='#auth_changepassword_first')">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="auth_changepassword_submit">
+				<div class="row">
+					<div class="right">
+						<button id="auth_changepassword_submit" name="auth_changepassword[submit]" type="submit" class="button button--primary">Save</button>
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>

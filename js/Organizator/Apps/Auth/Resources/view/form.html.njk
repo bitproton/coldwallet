@@ -1,0 +1,44 @@
+<div class="modal--std">
+	<div class="modal--std__header">
+		Encrypt Your Wallet
+	</div>
+	<div class="modal--std__content">
+		<form name="auth_setpassword" class="modal__setPasswordForm__form formStd" action="{{ path('form_wallet_new_address', {}, { absolute:true }) }}" method="post" autocomplete="off" spellcheck="false">
+
+			<div class="notice notice--yellow">
+				Enter a password to protect your wallet.
+			</div>
+
+			<div class="form-group js__formGroup" for="auth_setpassword_first">
+				<div class="row">
+					<div class="left">
+						<label for="auth_setpassword_first" class="label">Password</label>
+					</div>
+					<div class="right">
+						<input id="auth_setpassword_first" name="auth_setpassword[first]" type="password" class="input js__input" org-validate="@length(min=8, max=4096) && @same(with='#auth_setpassword_second', base=true)">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="auth_setpassword_second">
+				<div class="row">
+					<div class="left">
+						<label for="auth_setpassword_second" class="label">Password (again)</label>
+					</div>
+					<div class="right">
+						<input id="auth_setpassword_second" name="auth_setpassword[second]" type="password" class="input js__input" org-validate="@notblank && @same(with='#auth_setpassword_first')">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="auth_setpassword_submit">
+				<div class="row">
+					<div class="right">
+						<button id="auth_setpassword_submit" name="auth_setpassword[submit]" type="submit" class="button button--primary">Save</button>
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>

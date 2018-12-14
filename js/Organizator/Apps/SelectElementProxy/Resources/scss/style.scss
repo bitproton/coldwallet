@@ -1,0 +1,132 @@
+.selectElementProxy {
+	border:1px solid #dedede;
+	position:relative;
+	z-index:9;
+	user-select:none;
+	transition:all 0.2s;
+
+	&.state--open {
+		&:not(.reversed){
+			border-top-color: #0057E5;
+			border-right-color: #0057E5;
+			border-left-color: #0057E5;
+		}
+
+		&.reversed {
+			border-bottom-color: #0057E5;
+			border-right-color: #0057E5;
+			border-left-color: #0057E5;
+		}
+
+		.optionsContainerPositioner--relative {
+			position:relative;
+		}
+
+		.optionsContainerPositioner--fixed {
+			position:fixed;
+			overflow:visible;
+			background-color:#fff;
+		}
+
+		.optionsContainer {
+			z-index:99;
+			visibility:visible;
+			border-color: #0057E5;
+			height:initial;
+			overflow:initial;
+		}
+
+		.icon {
+			background-color:#f6f6f6;
+		}
+
+		.front {
+			opacity:0.5;
+		}
+	}
+
+	.optionsContainer{
+		position:absolute;
+		left:-1px;
+		right:-1px;
+		height:1px;
+		overflow:hidden;
+		z-index:-99;
+		border-style:solid;
+		border-color:#dedede;
+		background-color:#fff;
+		visibility:hidden;
+		transition:border-color 0.2s;
+
+		.header {
+			background-color: #f6f6f6;
+		    padding: 6px 10px;
+		    color: rgba(0, 0, 0, 0.25);
+		    text-transform: uppercase;
+		    font-weight: bold;
+		    font-size: 11px;
+		    letter-spacing: 0.5px;
+			border-top:1px solid #dedede;
+			border-bottom:1px solid #dedede;
+		}
+	}
+
+	&:not(.reversed) .optionsContainer {
+		top:100%;
+		border-width:0 1px 1px 1px;
+	}
+
+	&.reversed .optionsContainer {
+		bottom:100%;
+		border-width:1px 1px 0 1px;
+	}
+
+	.option {
+		display:flex;
+		justify-content:space-between;
+		position:relative;
+		padding:9px 10px;
+		cursor:pointer;
+
+		&.front {
+			transition: opacity 0.2s;
+		}
+
+		&:not(.front):hover {
+			background-color:#0057e5;
+			color:#fff;
+		}
+
+		&:not(.front):not(:last-child){
+			border-bottom:1px solid #dedede;
+
+			&:hover {
+				border-color:#0057e5;
+			}
+		}
+
+    	.icon {
+		    width: 17px;
+		    border-left: 1px solid #dedede;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    text-align:center;
+		}
+	}
+
+	&.reversed .option:not(.front) {
+			border-bottom:1px solid #dedede;
+
+			&:hover {
+				border-color:#0057e5;
+			}
+	}
+
+	&:hover {
+		.icon {
+			background-color:#fafafa;
+		}
+	}
+}

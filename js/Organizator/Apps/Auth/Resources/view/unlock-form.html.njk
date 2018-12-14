@@ -1,0 +1,33 @@
+<div class="modal--std">
+	<div class="modal--std__header">
+		Unlock Wallet
+	</div>
+	<div class="modal--std__content">
+		<form name="auth_unlock" class="modal__unlockForm__form formStd" action="{{ path('form_wallet_new_address', {}, { absolute:true }) }}" method="post" autocomplete="off" spellcheck="false">
+
+			<div class="notice notice--yellow">
+				Enter your password to unlock your wallet.
+			</div>
+
+			<div class="form-group js__formGroup" for="auth_unlock_password">
+				<div class="row">
+					<div class="left">
+						<label for="auth_unlock_password" class="label">Password</label>
+					</div>
+					<div class="right">
+						<input id="auth_unlock_password" name="auth_unlock[password]" type="password" class="input js__input">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group js__formGroup" for="auth_unlock_submit">
+				<div class="row">
+					<div class="right">
+						<button id="auth_unlock_submit" name="auth_unlock[submit]" type="submit" class="button button--primary">Unlock</button>
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>

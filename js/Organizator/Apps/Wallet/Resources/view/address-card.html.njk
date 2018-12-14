@@ -1,0 +1,23 @@
+<div class="addressCard js__addressCard" data-object="address" data-object-address="{% if address.type == 'legacy' %}{{ address.address }}{% elseif address.type == 'segwit' %}{{ address.segwitaddress }}{% elseif address.type == 'multisig' %}{{ address.multisigaddress }}{% endif %}" data-object-id="{{ address.$loki }}">
+	<div class="addressCard__left">
+		<div class="addressLabel">
+			{{ address.label }}
+		</div>
+
+		<div class="addressAddress">
+			{% if address.type == 'legacy' %}
+				{{ address.address }}
+			{% elseif address.type == 'segwit' %}
+				{{ address.segwitaddress }}
+			{% elseif address.type == 'multisig' %}
+				{{ address.multisigaddress }}
+			{% endif %}
+		</div>
+	</div>
+	<div class="addressCard__right">
+		<div class="actionbar">
+			<button class="button button--blue js__showAddressDetails"><i class="fa fa-info-circle"></i> Details</button>
+			<button class="button button--red js__deleteAddressButton"><i class="fa fa-trash"></i></button>
+		</div>
+	</div>
+</div>
