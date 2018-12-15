@@ -2,7 +2,7 @@ BitProton Cold Wallet
 =======
 **NOTE:** This is a beta software. It's not well tested and reviewed by others. Don't use it other than experimenting with little amounts for now.
 
-Cold Wallet is a transaction signing tool for Bitcoin SV. It enables to sign transactions with given keys with a sleek GUI. Offline usage is recommended.
+Cold Wallet is a transaction signing tool for Bitcoin SV. It enables to sign transactions with given keys on a clean GUI. Offline usage is recommended.
 
 ## Motivation
 
