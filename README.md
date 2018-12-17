@@ -4,6 +4,8 @@ BitProton Cold Wallet
 
 Cold Wallet is a transaction signing tool for Bitcoin SV. It enables to sign transactions with given keys on a clean GUI. Offline usage is recommended.
 
+![BitProton Cold Wallet Screenshot](https://raw.githubusercontent.com/bitproton/coldwallet/master/assets/screenshot.png)
+
 ## Motivation
 
 Spending from paper/metal wallets without exposing keys to an online environment is cumbersome. This tool make easier to spend from paper/metal wallets with the coordination of a watchonly wallet or a web service like [BitProton](https://bitproton.com). 
